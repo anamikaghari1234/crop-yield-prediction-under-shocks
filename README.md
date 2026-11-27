@@ -1,71 +1,60 @@
-### Crop Yield Prediction Under Climate Shocks
+# Climate-Resilient Crop Yield Prediction | Machine Learning & Climate Risk Analysis
 
-### From Prediction to Reality: Understanding Climate Shocks and Crop Yield in India Using Machine Learning
+**Predictive Analytics | Machine Learning | Agricultural Intelligence | Climate Impact Assessment**
 
-##  Project Overview
+An end-to-end machine learning project analysing the relationship between climate conditions, soil characteristics and agricultural productivity across India. Compares predictive models, identifies key yield-driving factors and simulates drought scenarios to assess crop vulnerability and support climate-aware agricultural planning.
 
-This project explores the application of Machine Learning to predict agricultural crop yields and understand the impact of extreme climatic conditions on agricultural productivity in India.
+## 🔗 Project Links
+- **GitHub Repository:**(https://github.com/anamikaghari1234/crop-yield-prediction-under-shocks.git)
 
-Using historical agricultural, climate and soil data, the project develops predictive models and simulates climate shock scenarios to analyse crop-specific vulnerability to changing environmental conditions.
 
-##  Objectives
+## 🎯 Business Problem
 
-- Analyse historical agricultural and climatic data.
-- Identify key factors influencing crop yield.
-- Develop and compare machine learning regression models.
-- Predict yields for selected crops.
-- Simulate climate shocks and evaluate their potential impact on crop productivity.
+Climate variability, unpredictable rainfall and changing soil conditions create significant uncertainty in agricultural productivity. This project applies machine learning to predict crop yields, identify climate-sensitive crops and quantify potential production losses under simulated drought conditions.
 
-##  Dataset
+## 📊 Dataset Overview
 
-- **Records:** 19,689
-- **Geographical Coverage:** 30 Indian states
-- **Time Period:** 1997–2020
-- **Crops Analysed:** Jute, Sugarcane, Garlic, Arecanut and Wheat.
+| Attribute | Details |
+|---|---|
+| Total Records | 19,689 |
+| Geographic Coverage | 30 Indian states |
+| Time Period | 1997–2020 |
+| Target Variable | Crop Yield (kg/ha) |
+| Crops Analysed | Sugarcane, Wheat, Jute, Garlic, Arecanut |
+| Input Features | Temperature, rainfall, humidity, soil nutrients, pH and cultivated area |
 
-**Key Features:** Rainfall, temperature, humidity, soil nutrients (N, P, K), pH, area, fertilizer and pesticide usage.
+## ⚙️ Data Processing & Exploratory Analysis
 
-**Target Variable:** Crop Yield.
+- **Data Preparation:** Consolidated agricultural, climate and soil-related variables into a unified analytical dataset.
+- **Exploratory Data Analysis:** Examined yield distributions, correlations, regional patterns and crop-specific climate relationships.
+- **Outlier Analysis:** Identified extreme observations in yield, rainfall, temperature and nitrogen while retaining genuine climate extremes for shock analysis.
+- **Feature Selection:** Evaluated feature relationships and prioritised influential predictors to reduce redundancy.
+- **Visual Analytics:** Used distribution analysis, correlation heatmaps and comparative plots to interpret agricultural patterns.
 
-## Technologies Used
+## 🤖 Machine Learning Models
 
-- Python
-- Pandas & NumPy
-- Matplotlib & Seaborn
-- Scikit-learn
-- ARIMA (Time-Series Analysis)
-- Jupyter Notebook
+Four regression algorithms were evaluated to identify the most effective crop-yield prediction approach.
 
-##  Methodology
+| Algorithm | Test R² | Key Strength |
+|---|---:|---|
+| Linear Regression | 0.509 | Interpretable baseline |
+| Decision Tree | **0.877** | Non-linear pattern detection |
+| Random Forest | 0.824 | Robust predictions |
+| Gradient Boosting | 0.868 | Ensemble-based prediction |
 
-1. **Data Preprocessing:** Data cleaning, handling missing values and preparation.
-2. **Exploratory Data Analysis:** Analysing distributions, outliers, correlations and crop-specific patterns.
-3. **Feature Engineering:** Creating climate indicators and identifying relevant agricultural and environmental features.
-4. **Model Development:** Training and comparing Linear Regression, Decision Tree, Random Forest and Gradient Boosting models.
-5. **Model Evaluation:** Comparing model performance using R² and Mean Squared Error (MSE).
-6. **Climate Shock Simulation:** Evaluating predicted yield changes under reduced rainfall and humidity conditions.
-7. **Time-Series Analysis:** Applying ARIMA to explore annual sugarcane production trends.
+**Best Performing Model:** Decision Tree Regressor, achieving a test R² of **0.877** for Sugarcane yield prediction.
 
-## Model Performance
+## 📈 Key Results & Business Insights
 
-For the sugarcane yield prediction comparison:
+### 1. Crop Yield Prediction
+- Achieved a test R² of 0.877 for Sugarcane using Decision Tree Regression.
+- Recorded crop-specific test R² scores of 0.804 for Arecanut, 0.877 for Sugarcane, 0.737 for Jute, 0.750 for Garlic and 0.811 for Wheat.
+- Identified soil pH, humidity, potassium and temperature as influential yield-related factors.
 
-| Model | Test R² |
-|---|---:|
-| Linear Regression | 0.509 |
-| Decision Tree | 0.877 |
-| Random Forest | 0.824 |
-| Gradient Boosting | 0.868 |
+### 2. Climate Shock Simulation
+Simulated drought conditions by reducing rainfall by 50% and humidity by 15% to estimate crop vulnerability.
 
-The Decision Tree achieved the highest test R² in this comparison.
-
-## Climate Shock Analysis
-
-The project simulated a climate shock involving a 50% reduction in rainfall and a 15% reduction in humidity.
-
-**Estimated crop yield reductions:**
-
-| Crop | Yield Reduction |
+| Crop | Estimated Yield Decline |
 |---|---:|
 | Jute | 21.28% |
 | Sugarcane | 18.01% |
@@ -73,33 +62,39 @@ The project simulated a climate shock involving a 50% reduction in rainfall and 
 | Wheat | 4.56% |
 | Arecanut | 1.01% |
 
-### Key Findings
+**Key Insight:** Jute, Sugarcane and Garlic demonstrated higher vulnerability, while Wheat and Arecanut showed comparatively greater resilience under the simulated conditions.
 
-- Jute showed the highest estimated vulnerability under the simulated scenario.
-- Sugarcane and Garlic also experienced considerable predicted yield reductions.
-- Wheat and Arecanut demonstrated comparatively lower sensitivity.
-- Tree-based models captured non-linear crop-climate relationships more effectively than the linear baseline in the sugarcane comparison.
+### 3. Sugarcane Drought Assessment
+- Estimated a decline in average yield from 47.13 to 38.64 under simulated drought conditions.
+- Quantified an approximately 18% yield reduction, highlighting the crop's dependence on water availability.
 
-*Note: Climate shock results are model-based scenario estimates, not observed real-world yield losses.*
+### 4. Time-Series Forecasting
+- Applied ARIMA to annual Sugarcane production data.
+- Identified limitations in capturing long-term production growth and external influencing factors.
 
-## 📂 Project Presentation
+## 🛠️ Technology Stack
 
-Explore the complete project presentation for the analysis, visualisations, model comparisons and findings.
+- **Programming:** Python
+- **Data Manipulation:** Pandas, NumPy
+- **Data Visualisation:** Matplotlib, Seaborn
+- **Machine Learning:** Scikit-learn
+- **Time-Series Analysis:** ARIMA, Statsmodels
+- **Development Environment:** Jupyter Notebook
 
-- [View PowerPoint Presentation](presentation/OUR%20FINAL%20PPT.pptx)
-- [View PDF Presentation](presentation/Project_Presentation.pdf)
+## 💼 Business Applications
+
+- **Agriculture:** Crop-yield forecasting and productivity assessment.
+- **Government & Policy:** Climate vulnerability assessment and agricultural planning.
+- **Agri-Tech:** Data-driven crop recommendations and risk monitoring.
+- **Supply Chain:** Production forecasting and agricultural resource planning.
 
 ## 🚀 Future Scope
 
-- Integrate real-time weather and climate data.
-- Explore advanced models such as LSTM.
-- Develop an interactive crop yield prediction dashboard.
-- Improve climate risk assessment through regional data integration.
+- Integrate real-time weather and soil datasets.
+- Explore LSTM and hybrid forecasting architectures.
+- Build climate-adaptive crop-yield prediction systems.
+- Extend drought and extreme-weather simulations to additional crops.
 
-## 👩‍💻 Author
+## 👩‍💻 Project Contribution
 
-**Anamika Hari**
-
-Data Science Graduate | Professional Fellowship in Data Science and Agentic AI Engineering
-
-[GitHub Profile](https://github.com/anamikaghari1234)
+Conducted exploratory data analysis, feature selection, regression model comparison, crop-specific performance evaluation and simulated climate-shock assessment to identify agricultural productivity patterns and climate-related yield risks.
